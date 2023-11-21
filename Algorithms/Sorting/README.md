@@ -5,4 +5,4 @@ This directory includes a collection of my implementations and solutions to prob
 
 ## Programming Problems
 
-- [Merge Two Sorted Arrays](MergeTwoSortedArrays.md): The challenge is to merge two sorted arrays into one sorted array efficiently.
+- [Merge Two Sorted Arrays](MergeSortedArrays/): Merge two sorted arrays into one sorted array.
