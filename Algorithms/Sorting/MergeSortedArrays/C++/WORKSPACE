@@ -1,0 +1,7 @@
+load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
+
+git_repository(
+    name = "googletest",
+    commit = "b10fad38c4026a29ea6561ab15fc4818170d1c10",
+    remote = "https://github.com/google/googletest.git",
+)
