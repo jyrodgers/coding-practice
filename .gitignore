@@ -1,0 +1,5 @@
+*.DS_Store*
+*bazel-C++*
+*bazel-bin*
+*bazel-out*
+*bazel-testlogs*
