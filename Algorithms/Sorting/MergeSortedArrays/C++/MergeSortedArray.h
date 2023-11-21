@@ -5,12 +5,10 @@
 void mergeSortedArrays(std::vector<int>& nums1, int m, std::vector<int>& nums2, int n)
 {
 
-    // Check if nums1's size is equal to m + n
     if (nums1.size() != m + n) {
         throw std::invalid_argument("The length of nums1 must be equal to m + n.");
     }
 
-    // Check if nums1's size is equal to m + n
     if ( 1  > m + n ) {
         std::cout << "m = " << m << " n = " << n << " m + n = " << ( m + n );
         throw std::invalid_argument("The sum of m + n must be greater than or equal to 1.");
