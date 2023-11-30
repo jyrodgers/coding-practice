@@ -20,7 +20,7 @@ The challenge involves merging two sorted integer arrays, `nums1` and `nums2`.
 
 ## Test Cases
 
-The solution includes several test cases to ensure its correctness:
+The solution includes several test cases to ensure its correctness.
 
 ### Normal Scenarios
 
@@ -54,3 +54,83 @@ If elements from `nums2` are larger or if all the originally filled elements of 
 
 This process ensures that no existing elements in `nums1` are overwritten before they are placed in their correct position.
 The merging is completed when all elements from `nums2` have been moved into `nums1`, resulting in a single, fully merged and sorted array.
+
+### Example
+
+Let's take the following example where nums1 = [1,2,3,0,0,0] and nums2 = [2,5,6].
+
+#### Step 1: Initialize Pointers and Compare
+
+To begin merging, we initialize our pointers and start comparing elements from the back of both arrays:
+
+- i points to the last valid element in nums1, which is nums1[2].
+- j points to the last element in nums2, which is nums2[2].
+- k points to the last available position in nums1, which is nums1[5].
+
+In this step, we compare nums1[2] (3) and nums2[2] (6). Since 3 is not greater than 6, we place 6 at the position indicated by k in nums1. Our nums1 array now looks like this: [1,2,3,0,0,6]. Since we placed an element from nums2, we decrement j to nums[1] (1). We also decrement k to nums1[4] to prepare for the next placement.
+
+![](diagrams/diagram1.png)
+
+#### Step 2: Continue Comparing and Placing
+
+In the next step, we continue the process:
+
+- i points to nums1[2] (3).
+- j points to nums2[1] (5).
+- k points to nums1[4].
+
+Here, we compare nums1[2] (3) and nums2[1] (5). Again, 3 is not greater than 5, so we place 5 at nums1[4]. Our nums1 array becomes [1,2,3,0,5,6]. Since we placed an element from nums2, we decrement j to nums2[0] and k to nums1[3] to prepare for the next placement.
+
+![](diagrams/diagram2.png)
+
+#### Step 3: Continuing the Merge
+
+We proceed with the merge:
+
+- i points to nums1[2] (3).
+- j points to nums2[0] (2).
+- k points to nums1[3].
+
+In this step, we find that nums1[2] (3) is greater than nums2[0] (2), so we place 3 at nums1[3]. Our array now looks like this: [1,2,3,3,5,6]. Since we placed an element from nums1, we decrement i to nums1[1] and k to nums1[2] for the next placement.
+
+![](diagrams/diagram3.png)
+
+#### Step 4: Continuing the Merge
+
+We're making progress:
+
+- i points to nums1[1] (2).
+- j points to nums2[0] (2).
+- k points to nums1[2].
+
+In this step, we find that nums1[i] (2) is not greater than nums2[j] (2), so we place nums2[j] (2) at nums1[k]. Our array is now [1,2,2,3,5,6], and we decrement j which is now out of bounds and k to nums1[1] for the next placement.
+
+![](diagrams/diagram4.png)
+
+#### Step 5: Place remaining elements
+
+We're almost there:
+
+- i points to nums1[1] (2).
+- j is out of bounds in nums2.
+- k points to nums1[1].
+
+Since j is out of bounds in nums2, we start placing the remaining elements in nums1. Though they are already in the correct location we continue with the algorithm. Specifically, we place nums1[1] (2) at nums1[1].
+
+![](diagrams/diagram5.png)
+
+#### Step 6: Completing the Merge
+
+In the final step:
+
+- i points to nums1[0] (1).
+- j is out of bounds in nums2.
+- k points to nums1[0].
+
+We continue placing the remaining elements of nums1 in place by placing nums1[0] (1) at nums1[0].
+
+Our sorted merge is now complete, and the resulting array is [1,1,2,3,5,6].
+
+![](diagrams/diagram6.png)
+
+And there you have it! You've successfully merged two sorted arrays, step by step, ensuring that the merged array remains sorted and efficiently utilizing the available space in nums1. Happy coding!
