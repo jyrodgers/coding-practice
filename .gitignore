@@ -3,3 +3,5 @@
 *bazel-bin*
 *bazel-out*
 *bazel-testlogs*
+*.aux*
+*.log*
