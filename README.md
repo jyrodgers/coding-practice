@@ -64,7 +64,7 @@ Ideal for understanding the foundational elements of programming.
 Problems focusing on algorithmic techniques like sorting, searching, recursion, dynamic programming, and greedy algorithms.
 These challenges help sharpen problem-solving and computational thinking.
 
-### Dynamic Programming
+### [Dynamic Programming](Dynamic/)
 Challenges that require dynamic programming strategies, ideal for understanding optimization problems and learning how to approach problems that involve breaking them down into simpler sub-problems.
 
 ### Database Queries
