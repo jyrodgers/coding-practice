@@ -1,11 +1,11 @@
 # Set the minimum version of CMake required
 cmake_minimum_required(VERSION 3.10)
+enable_testing()
 
-# Set your project name
-project(MergeSortedArray)
-
-# Set C++ standard
-set(CMAKE_CXX_STANDARD 14)
-
-# Add the executable
-add_executable(MergeSortedArray MergeSortedArray.cpp)
+add_executable(MergeSortedArray MergeSortedArrayTest.cpp)
+target_link_libraries(
+  MergeSortedArray
+  GTest::gtest_main
+)
+include(GoogleTest)
+gtest_discover_tests(MergeSortedArray)

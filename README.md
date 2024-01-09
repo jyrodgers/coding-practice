@@ -27,16 +27,12 @@ You can build and run the solutions and their tests using either CMake or Bazel.
 
 ### Building with CMake
 
-1. Navigate to the build directory
+1. Configure and build the project:
+
+From the root directory run these commands:
 
 ```
-cd build
-```
-
-2. Configure and build the project:
-
-```
-cmake .. && cmake --build .
+mkdir build; cmake -S . -B build; cmake --build build
 ```
 
 ### Building with Bazel
@@ -79,7 +75,6 @@ These challenges are great for those who want to enhance their database manageme
 ### System Design
 
 This section contains problems related to designing large-scale systems, focusing on aspects like scalability, system architecture, and design patterns.
-
 
 ## License
 This project is open-sourced under the [MIT license](https://mit-license.org/).
