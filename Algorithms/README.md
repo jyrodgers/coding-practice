@@ -10,7 +10,8 @@ Here, you will find a collection of problems that range from basic sorting and s
 - Graph Algorithms: Problems that involve graph traversal, shortest paths, minimum spanning trees, and graph-related optimizations.
 - Greedy Algorithms: Challenges where greedy strategies are used for optimization problems.
 - Divide and Conquer: Solutions that involve breaking down problems into smaller subproblems, solving them independently, and combining their results.
-- [Dynamic Programming](Dynamic/): Problems that involve complex decision-making, solved efficiently using dynamic programming techniques.
+- [Dynamic Programming](Dynamic/): Problems that involve breaking them down into simpler sub-problems.
+
 
 ## Contributing
 
